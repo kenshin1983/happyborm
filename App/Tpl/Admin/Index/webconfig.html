@@ -1,0 +1,45 @@
+<div class="pageContent">
+	<form method="post" action="/Admin/index/webconfig" class="pageForm required-validate" onsubmit="return validateCallback(this, navTabAjaxDone);">
+		<div class="tabs" currentIndex="0" eventType="click">
+			<div class="tabsHeader">
+				<div class="tabsHeaderContent">
+					<ul>
+						<volist name="tabAssoc" id="vo">
+							<li><a href="javascript:;"><span>{$vo}</span></a></li>
+						</volist>
+					</ul>
+				</div>
+			</div>
+			<div class="tabsContent" layoutH="70">
+				<volist name="tabAssoc" key="k" id="vo">
+					<div class="pageFormContent nowrap">
+						<volist name="data[$k-1]" id="item">
+							<dl>
+								<dt>{$item.name}：</dt>
+								<dd>{:configTpl($item)}</dd>
+								<span style="line-height:21px">{$item.desc}</span>
+							</dl>
+						</volist>
+					</div>
+				</volist>
+			</div>
+			<div class="formBar">
+				<ul>
+					<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				</ul>
+			</div>
+		</div>
+	</form>
+</div>
+<script type="text/javascript">
+function uploadifySuccess(file, data, response){
+	data = $.parseJSON(data);
+	if(data.errorCode == 0){
+		var image = '/temp/' + data.images[0].savename;
+		$('#imageBox_' + data.id).html('<img src="' + image + '" width="100" height="100" />');
+		$('#imageValue_' + data.id).val(image);
+	}else{
+		alert(data.errorMsg);
+	}
+}
+</script>

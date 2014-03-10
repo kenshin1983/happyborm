@@ -1,0 +1,120 @@
+<include file="Public:header" />
+<include file="Public:sidebar" />
+<div class="con_right">
+  <div class="rt_news">
+    <h2>最新资讯<span>|&nbsp;&nbsp;LATEST</span></h2>
+    <div style="position: absolute; width: 373px; height: 160px; z-index: 3; left: 18px; top: 34px" id="layer3">
+    	<volist name="newsList" id="item">
+			<table width="96%" border="0" align="center" cellpadding="0" cellspacing="1" class="STYLE1">
+			<tr>
+			  <td width="231" height="23" class="STYLE1">·<a class="STYLE1" href="/index/detail/id/{$item.article_id}">
+			    {$item.title}
+			    </a>
+			      </td>
+			  <td width="74" align="left"></td>
+			</tr>
+			</table>
+		</volist>
+	</div>
+  </div>
+  <div class="rt_flash"><script type="text/javascript">
+<!--
+    var focus_width=278
+	var focus_height=186
+	var text_height=0
+	var swf_height = focus_height+text_height
+	var pics='/static/happy/image/pic/1.JPG|/static/happy/image/pic/2.JPG|/static/happy/image/pic/3.JPG|/static/happy/image/pic/4.JPG|/static/happy/image/pic/5.JPG|/static/happy/image/pic/6.JPG'
+        var links='/index/detail/id/about|/index/detail/id/about|/index/detail/id/about|/index/detail/id/about|/index/detail/id/about|/index/detail/id/about'
+	var texts=' | | | | | '
+	document.write('<object ID="focus_flash" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ focus_width +'" height="'+ swf_height +'">');
+	document.write('<param name="allowScriptAccess" value="sameDomain"><param name="movie" value="/static/happy/image/playswfnew.swf"><param name="quality" value="high"><param name="bgcolor" value="#FFFFFF">');
+	document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
+	document.write('<param name="FlashVars" value="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'">');
+	document.write('<embed ID="focus_flash" src="/static/happy/image/playswfnew.swf" wmode="opaque" FlashVars="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'" menu="false" bgcolor="#C5C5C5" quality="high" width="'+ focus_width +'" height="'+ swf_height +'" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />');		
+	document.write('</object>');
+	
+	//-->
+
+  </script></div>
+  <div class="rt_about">
+    <h2>关于我们<span>|&nbsp;&nbsp;ABOUT US</span></h2>
+	<div class="p_li">
+      <p>“喜泰月子中心”位于美国纽约皇后区的法拉盛，一个新移民的聚集地，号称纽约的小中国，没有任何语言问题，</p>
+      <p>让您在一个完全陌生的环境中有仍有家乡的感觉。全新装修的优雅别墅位于环境优美的华人住......<a href="/index/detail/id/about">[查看详细]</a></p>
+    </div>
+    <ul>
+      <li>
+        <div style="position: absolute; width: 100px; height: 123px; z-index: 1; left: 29px; top: 304px" id="layer1">
+          <DIV id=demo style="OVERFLOW: hidden; WIDTH: 640px; HEIGHT: 90px">
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <TBODY>
+                <TR>
+                  <TD id=demo1 width="99%"><TABLE cellSpacing=0 cellPadding=0 width=1080 border=0>
+                      <TBODY>
+                        <TR>
+                          <TD width="135"><IMG height=90 src="/static/happy/image/pic/7.JPG" width=128></TD>
+                          <TD width="135"><IMG height=90 src="/static/happy/image/pic/8.JPG" width=128></TD>
+                          <TD width="135"><IMG height=90 src="/static/happy/image/pic/9.JPG" width=128></TD>
+                          <TD><IMG height=90 src="/static/happy/image/pic/10.JPG" width=128></TD>
+                          <TD><IMG height=90 src="/static/happy/image/pic/11.JPG" width=128></TD>
+                          <TD><IMG height=90 src="/static/happy/image/pic/12.JPG" width=128></TD>
+                          <TD><IMG height=90 src="/static/happy/image/pic/13.JPG" width=128></TD>
+                          <TD><IMG height=90 src="/static/happy/image/pic/1.JPG" width=128></TD>
+                        </TR>
+                      </TBODY>
+                    </TABLE></TD>
+                  <TD id=demo2 width="1%">　</TD>
+                </TR>
+              </TBODY>
+            </TABLE>
+          </DIV>
+          <SCRIPT lanaguage="javascript">  
+<!--  
+var speed=30  
+demo2.innerHTML=demo1.innerHTML  
+function Marquee(){  
+if(demo2.offsetWidth-demo.scrollLeft<=0)  
+demo.scrollLeft-=demo1.offsetWidth  
+else{  
+demo.scrollLeft++  
+}  
+}  
+var MyMar=setInterval(Marquee,speed)  
+demo.onmouseover=function(){clearInterval(MyMar)}  
+demo.onmouseout=function(){MyMar=setInterval(Marquee,speed)}  
+//-->  
+        </SCRIPT></div>
+      </li>
+    </ul>
+    <p>　
+  </div>
+  <div class="rt_hzyy">
+    <h2>合作医院<span>|&nbsp;&nbsp;COOPERATIVE HOSPITAL</span></h2>
+    <div class="hzyy_dl">
+      <dl>
+        <dd><a href="###"><img src="/static/happy/image/hzyy1.jpg" /></a></dd>
+        <dt><a href="###">纽约皇后医院</a></dt>
+        <dt><a href="###">New York Hospital Queens</a></dt>
+      </dl>
+      <dl>
+        <dd><a href="###"><img src="/static/happy/image/hzyy2.jpg" /></a></dd>
+        <dt><a href="###">纽约法拉盛医院</a></dt>
+        <dt><a href="###">Flushing Hospital Medical Center</a></dt>
+      </dl>
+      <!-- <dl>
+        <dd><a href="###"><img src="/static/happy/image/hzyy3.jpg" /></a></dd>
+        <dt><a href="###">纽约曼哈顿下城医院</a></dt>
+        <dt><a href="###">New York Downtown Hospital</a></dt>
+      </dl>
+      <dl>
+        <dd><a href="###"><img src="/static/happy/image/hzyy4.jpg" /></a></dd>
+        <dt><a href="###">纽约艾姆赫斯医院</a></dt>
+        <dt><a href="###">New York Elmhurts Hospital</a></dt>
+      </dl> -->
+    </div>
+  </div>
+  <div class="rt_fwlc">
+    <h2>服务流程<span>|&nbsp;&nbsp;SERVICE PROCESS</span></h2>
+    <img src="/static/happy/image/kk.jpg" /> </div>
+</div>
+<include file="Public:footer" />

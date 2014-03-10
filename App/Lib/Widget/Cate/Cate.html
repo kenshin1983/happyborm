@@ -1,0 +1,10 @@
+<div class="side_sub">
+	<div class="sub_img_tt">
+		<a href="{:getCateLink($parent['cate_id'], $parent['cate_alpha'])}">{$parent.cate_name}</a>
+	</div>
+	<ul>
+		<volist name="children" id="vo">
+			<li><a <eq name="cate_id" value="$vo['cate_id']">class="current"</eq> href="{:getCateLink($vo['cate_id'], $vo['cate_alpha'])}">{$vo.cate_name}</a></li>
+		</volist>
+	</ul>
+</div>

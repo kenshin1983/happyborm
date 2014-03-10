@@ -1,0 +1,45 @@
+<include file="Public:header" />
+<include file="Public:sidebar" />
+	
+<table width="668" border="0" align="center" cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr>
+  			<td height="33" valign="bottom" class="STYLE1">
+  				<span class="MainBG02"></span>
+    			<table width="625" height="25" border="0" align="right" cellpadding="0" cellspacing="0">
+          			<tbody><tr>
+            			<td width="538" height="28" valign="middle" class="STYLE1"><span class="orangeb">{$data.cate_name}</span></td>
+            			<td width="90">　</td>
+          			</tr></tbody>
+				</table>
+			</td>
+		</tr>
+		<tr>
+		  <td height="10"></td>
+		</tr>
+
+		<tr>
+  			<td>
+  				<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+    				<tbody><tr>
+      					<td valign="top" class="STYLE1">
+      						<table width="93%" border="0" cellspacing="0" cellpadding="0" align="center" class="cupe">          
+								<tbody>
+									<volist name="list" id="item">
+									<tr>
+				                        <td width="80%" height="25" align="left" class="STYLE1">
+										· <a class="STYLE1" href="/index/detail/id/{$item.article_id}">{$item.title}</a></td>
+				                        <td width="2%">　</td>
+				                        <td width="18%" align="left" class="STYLE1"><div align="center" class="STYLE1">{$item.ctime|formatDate}</div></td>
+				                    </tr>
+				                	</volist>
+								</tbody>
+							</table>
+						</td>
+					</tr></tbody>
+				</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<include file="Public:footer" />

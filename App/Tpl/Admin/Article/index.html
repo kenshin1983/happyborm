@@ -1,0 +1,98 @@
+<form id="pagerForm" method="post" action="#rel#">
+	<input type="hidden" name="pageNum" value="{$page.pageNum}" />
+	<input type="hidden" name="numPerPage" value="{$page.numPerPage}" />
+	<input type="hidden" name="orderField" value="{$Think.request.orderField}" />
+	<input type="hidden" name="orderDirection" value="{$Think.request.orderDirection}" />
+</form>
+
+<div class="pageHeader">
+	<form rel="pagerForm" onsubmit="return navTabSearch(this);" action="/Admin/article/index" method="post">
+	<div class="searchBar">
+		<ul class="searchContent">
+			<li>
+				<label>标题关键字：</label>
+				<input type="text" name="keywords" value="{$Think.request.keywords}"/>
+			</li>
+			<li>
+				<label>分类筛选：</label>
+				<input type="hidden" name="cate.id" value="{$Think.request.cate_id}" />
+				<input type="text" style="float:left" class="required" name="cate.name" value="{$Think.request.cate_id|cname}" readonly />
+				<a class="btnLook" href="/Admin/article/catebox" lookupGroup="cate">文章分类</a>	
+			</li>
+			<li>
+				<label>状态筛选：</label>
+				<select class="combox" name="status">
+					<option value="">所有</option>
+					<option value="0" <eq name="Think.request.status" value="0">selected</eq>>开启</option>
+					<option value="1" <eq name="Think.request.status" value="1">selected</eq>>关闭</option>
+				</select>
+			</li>
+		</ul>		
+		<div class="subBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">检索</button></div></div></li>
+				<!-- <li><a class="button" href="/Admin/article/search" target="dialog" mask="true" title="查询框"><span>高级检索</span></a></li> -->
+			</ul>
+		</div>
+	</div>
+	</form>
+</div>
+<div class="pageContent">
+	<div class="panelBar">
+		<ul class="toolBar">
+			<li><a class="add" href="/Admin/article/add" target="navTab" title="添加文章"><span>添加</span></a></li>
+			<li><a class="edit" href="/Admin/article/edit?id={article_id}" target="navTab" warn="请选择文章" title="修改文章"><span>修改</span></a></li>
+			<li><a title="删除无法恢复，确实要删除这些文章吗?" target="selectedTodo" rel="ids" postType="string" href="/Admin/article/del" class="delete"><span>批量删除</span></a></li>
+			<li class="line">line</li>
+			<!-- <li><a class="icon" href="demo/common/dwz-team.xls" target="dwzExport" targetType="navTab" title="实要导出这些记录吗?"><span>导出EXCEL</span></a></li> -->
+		</ul>
+	</div>
+	<table class="table" width="1160" layoutH="138">
+		<thead>
+			<tr>
+				<th width="22"><input type="checkbox" group="ids" class="checkboxCtrl"></th>
+				<th width="40" orderField="article_id" <eq name="Think.request.orderField" value="article_id">class="{$Think.request.orderDirection}"</eq>>ID</th>
+				<th>标题</th>
+				<th width="150">分类</th>
+				<th width="150" align="center" orderField="ctime" <eq name="Think.request.orderField" value="ctime">class="{$Think.request.orderDirection}"</eq>>添加时间</th>
+				<th width="150" align="center" orderField="mtime" <eq name="Think.request.orderField" value="mtime">class="{$Think.request.orderDirection}"</eq>>修改时间</th>
+				<th width="60" align="center" orderField="ordering" <eq name="Think.request.orderField" value="ordering">class="{$Think.request.orderDirection}"</eq>>排序</th>
+				<th width="60" align="center">状态</th>
+				<th width="70">操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<volist name="data" id="vo">
+			<tr target="article_id" rel="{$vo.article_id}">
+				<td><input name="ids" value="{$vo.article_id}" type="checkbox"></td>
+				<td>{$vo.article_id}</td>
+				<td>{$vo.title}</td>
+				<td>{$vo.cate_id|cname}</td>
+				<td>{$vo.ctime}</td>
+				<td>{$vo.mtime}</td>
+				<td>{$vo.ordering}</td>
+				<td>{$vo['status'] ? '关闭' : '开启'}</td>
+				<td>
+					<a title="删除后无法恢复，确认删除？" target="ajaxTodo" href="/Admin/article/del?ids={$vo.article_id}" class="btnDel">删除</a>
+					<a title="修改文章" target="navTab" href="/Admin/article/edit?id={$vo.article_id}" class="btnEdit">修改</a>
+				</td>
+			</tr>
+			</volist>
+		</tbody>
+	</table>
+	<div class="panelBar">
+		<div class="pages">
+			<span>显示</span>
+			<select class="combox" name="numPerPage" onchange="navTabPageBreak({numPerPage:this.value})">
+				<option value="20" <eq name="page.numPerPage" value="20">selected</eq>>20</option>
+				<option value="50" <eq name="page.numPerPage" value="50">selected</eq>>50</option>
+				<option value="100" <eq name="page.numPerPage" value="100">selected</eq>>100</option>
+				<option value="200" <eq name="page.numPerPage" value="200">selected</eq>>200</option>
+			</select>
+			<span>条，共{$count}条</span>
+		</div>
+		
+		<div class="pagination" targetType="navTab" totalCount="{$count}" numPerPage="{$page.numPerPage}" pageNumShown="10" currentPage="{$page.pageNum}"></div>
+
+	</div>
+</div>

@@ -1,0 +1,6 @@
+<div class="bread_nav">
+	<a href='/'>首页</a>
+	<volist name="bread" id="vo">
+		&gt; <a href="{:getCateLink($vo['cate_id'], $vo['cate_alpha'])}">{$vo.cate_name}</a>
+	</volist>	 
+</div>

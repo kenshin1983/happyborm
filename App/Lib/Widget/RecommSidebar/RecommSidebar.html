@@ -1,0 +1,15 @@
+<!-- 美宝之家新闻 -->
+<volist name="data" id="cate">
+	<div class="side_bar_list">
+		<h3>
+			<a href="{:getCateLink($cate['cate']['cate_id'], $cate['cate']['cate_alpha'])}">{$cate.cate.cate_name}</a>
+		</h3>
+		<div class="list_con">
+			<ul class="news_list">
+				<volist name="cate.article" id="vo">
+					<li><a href='{:getArticleLink($vo.article_id)}'>{$vo.title}</a></li>
+				</volist>
+			</ul>
+		</div>
+	</div>
+</volist>

@@ -1,0 +1,69 @@
+<div class="pageContent">     
+      <div style=" float:left; display:block; margin:10px; overflow:auto; width:300px; height:500px; border:solid 1px #CCC; line-height:21px; background:#FFF;">
+             <div class="panelBar">
+                  <ul class="toolBar">
+                        <li><span>{:navPosArr('main')}</span></li>
+                        <li class="line">line</li>
+                        <li><a class="add" href="/Admin/index/addnav?pos=main" target="dialog"><span>添加</span></a></li>
+                        
+                  </ul>
+            </div>
+            <ul class="tree expand">
+                  <volist name="data.main" id="vo">
+                  <li><a href="/Admin/index/editnav?id={$vo.nav_id}" target="dialog">{$vo.name}</a>
+                        <notempty name="vo._child">
+                        <ul>
+                              <volist name="vo._child" id="child">
+                              <li><a href="/Admin/index/editnav?id={$child.nav_id}" target="dialog">{$child.name}</a></li>
+                              </volist>
+                        </ul>
+                        </notempty>
+                  </li>
+                  </volist>
+            </ul>
+      </div>
+      <div style=" float:left; display:block; margin:10px; overflow:auto; width:300px; height:500px; border:solid 1px #CCC; line-height:21px; background:#FFF;">
+             <div class="panelBar">
+                  <ul class="toolBar">
+                        <li><span>{:navPosArr('top')}</span></li>
+                        <li class="line">line</li>
+                        <li><a class="add" href="/Admin/index/addnav?pos=top" target="dialog"><span>添加</span></a></li>
+                  </ul>
+            </div>
+            <ul class="tree expand">
+                  <volist name="data.top" id="vo">
+                  <li><a href="/Admin/index/editnav?id={$vo.nav_id}" target="dialog">{$vo.name}</a>
+                        <notempty name="vo._child">
+                        <ul>
+                              <volist name="vo._child" id="child">
+                              <li><a href="/Admin/index/editnav?id={$child.nav_id}" target="dialog">{$child.name}</a></li>
+                              </volist>
+                        </ul>
+                        </notempty>
+                  </li>
+                  </volist>
+            </ul>
+      </div>
+      <div style=" float:left; display:block; margin:10px; overflow:auto; width:300px; height:500px; border:solid 1px #CCC; line-height:21px; background:#FFF;">
+             <div class="panelBar">
+                  <ul class="toolBar">
+                        <li><span>{:navPosArr('bottom')}</span></li>
+                        <li class="line">line</li>
+                        <li><a class="add" href="/Admin/index/addnav?pos=bottom" target="dialog"><span>添加</span></a></li>
+                  </ul>
+            </div>
+            <ul class="tree expand">
+                  <volist name="data.bottom" id="vo">
+                  <li><a href="/Admin/index/editnav?id={$vo.nav_id}" target="dialog">{$vo.name}</a>
+                        <notempty name="vo._child">
+                        <ul>
+                              <volist name="vo._child" id="child">
+                              <li><a href="/Admin/index/editnav?id={$child.nav_id}" target="dialog">{$child.name}</a></li>
+                              </volist>
+                        </ul>
+                        </notempty>
+                  </li>
+                  </volist>
+            </ul>
+      </div>
+</div>

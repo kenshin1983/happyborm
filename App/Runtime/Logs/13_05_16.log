@@ -1,0 +1,104 @@
+[ 2013-05-16T20:53:32+08:00 ] 192.168.0.104 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000490s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000591s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000179s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000268s ]
+INFO: [ view_parse ] --START--
+SQL: SHOW COLUMNS FROM `webconfig` [ RunTime:0.000605s ]
+SQL: SELECT `id`,`value` FROM `webconfig` WHERE ( status = 0 )  [ RunTime:0.000344s ]
+SQL: SHOW COLUMNS FROM `navconfig` [ RunTime:0.000736s ]
+SQL: SELECT `nav_id`,`pid`,`name`,`link` FROM `navconfig` WHERE ( `pos` = 'top' ) AND ( `status` = 0 ) ORDER BY ordering ASC, nav_id DESC  [ RunTime:0.000366s ]
+SQL: SELECT `nav_id`,`pid`,`name`,`link` FROM `navconfig` WHERE ( `pos` = 'main' ) AND ( `status` = 0 ) ORDER BY ordering ASC, nav_id DESC  [ RunTime:0.000479s ]
+NOTIC: [8] Undefined index: _child /var/www/php/happyborm/App/Runtime/Cache/Home/c08c5152411715bb0f4de5db58010edc.php 第 10 行.
+NOTIC: [8] Undefined index: _child /var/www/php/happyborm/App/Runtime/Cache/Home/c08c5152411715bb0f4de5db58010edc.php 第 10 行.
+NOTIC: [8] Undefined index: _child /var/www/php/happyborm/App/Runtime/Cache/Home/c08c5152411715bb0f4de5db58010edc.php 第 10 行.
+NOTIC: [8] Undefined index: _child /var/www/php/happyborm/App/Runtime/Cache/Home/c08c5152411715bb0f4de5db58010edc.php 第 10 行.
+NOTIC: [8] Undefined index: _child /var/www/php/happyborm/App/Runtime/Cache/Home/c08c5152411715bb0f4de5db58010edc.php 第 20 行.
+NOTIC: [8] Undefined index: _child /var/www/php/happyborm/App/Runtime/Cache/Home/c08c5152411715bb0f4de5db58010edc.php 第 20 行.
+SQL: SELECT `nav_id`,`pid`,`name`,`link` FROM `navconfig` WHERE ( `pos` = 'bottom' ) AND ( `status` = 0 ) ORDER BY ordering ASC, nav_id DESC  [ RunTime:0.000982s ]
+INFO: Run ParseTemplate Behavior [ RunTime:0.032150s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032294s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000417s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000242s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000164s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000286s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001261s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000369s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000485s ]
+
+[ 2013-05-16T20:53:33+08:00 ] ERR: (ThinkException) 无法加载模块:Uploads
+[ 2013-05-16T20:53:33+08:00 ] ERR: (ThinkException) 无法加载模块:Static
+[ 2013-05-16T20:53:33+08:00 ] ERR: (ThinkException) 无法加载模块:Uploads
+[ 2013-05-16T20:53:33+08:00 ] ERR: (ThinkException) 无法加载模块:Uploads
+[ 2013-05-16T20:53:33+08:00 ] ERR: (ThinkException) 无法加载模块:Uploads
+[ 2013-05-16T20:53:33+08:00 ] ERR: (ThinkException) 无法加载模块:Uploads
+[ 2013-05-16T20:53:33+08:00 ] ERR: (ThinkException) 无法加载模块:Uploads
+[ 2013-05-16T20:53:33+08:00 ] ERR: (ThinkException) 无法加载模块:Uploads
+[ 2013-05-16T20:53:33+08:00 ] ERR: (ThinkException) 无法加载模块:Uploads
+[ 2013-05-16T20:53:33+08:00 ] ERR: (ThinkException) 无法加载模块:Uploads
+[ 2013-05-16T20:53:34+08:00 ] ERR: (ThinkException) 无法加载模块:Uploads
+[ 2013-05-16T20:53:34+08:00 ] ERR: (ThinkException) 无法加载模块:Uploads
+[ 2013-05-16T20:53:34+08:00 ] ERR: (ThinkException) 无法加载模块:Static
+[ 2013-05-16T20:53:34+08:00 ] ERR: (ThinkException) 无法加载模块:Static
+[ 2013-05-16T20:53:34+08:00 ] ERR: (ThinkException) 无法加载模块:Static
+[ 2013-05-16T20:53:34+08:00 ] ERR: (ThinkException) 无法加载模块:Static
+[ 2013-05-16T20:53:34+08:00 ] ERR: (ThinkException) 无法加载模块:Static
+[ 2013-05-16T20:53:34+08:00 ] ERR: (ThinkException) 无法加载模块:Static
+[ 2013-05-16T20:53:34+08:00 ] ERR: (ThinkException) 无法加载模块:Static
+[ 2013-05-16T20:53:34+08:00 ] ERR: (ThinkException) 无法加载模块:Static
+[ 2013-05-16T20:53:34+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon
+[ 2013-05-16T20:56:49+08:00 ] 192.168.0.104 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001131s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001366s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000634s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000861s ]
+INFO: [ view_parse ] --START--
+SQL: SHOW COLUMNS FROM `navconfig` [ RunTime:0.002074s ]
+SQL: SELECT `nav_id`,`pid`,`name`,`link` FROM `navconfig` WHERE ( `pos` = 'top' ) AND ( `status` = 0 ) ORDER BY ordering ASC, nav_id DESC  [ RunTime:0.001198s ]
+SQL: SELECT `nav_id`,`pid`,`name`,`link` FROM `navconfig` WHERE ( `pos` = 'main' ) AND ( `status` = 0 ) ORDER BY ordering ASC, nav_id DESC  [ RunTime:0.001481s ]
+NOTIC: [8] Undefined index: _child /var/www/php/happyborm/App/Runtime/Cache/Home/c08c5152411715bb0f4de5db58010edc.php 第 10 行.
+NOTIC: [8] Undefined index: _child /var/www/php/happyborm/App/Runtime/Cache/Home/c08c5152411715bb0f4de5db58010edc.php 第 10 行.
+NOTIC: [8] Undefined index: _child /var/www/php/happyborm/App/Runtime/Cache/Home/c08c5152411715bb0f4de5db58010edc.php 第 10 行.
+NOTIC: [8] Undefined index: _child /var/www/php/happyborm/App/Runtime/Cache/Home/c08c5152411715bb0f4de5db58010edc.php 第 10 行.
+NOTIC: [8] Undefined index: _child /var/www/php/happyborm/App/Runtime/Cache/Home/c08c5152411715bb0f4de5db58010edc.php 第 20 行.
+NOTIC: [8] Undefined index: _child /var/www/php/happyborm/App/Runtime/Cache/Home/c08c5152411715bb0f4de5db58010edc.php 第 20 行.
+SQL: SELECT `nav_id`,`pid`,`name`,`link` FROM `navconfig` WHERE ( `pos` = 'bottom' ) AND ( `status` = 0 ) ORDER BY ordering ASC, nav_id DESC  [ RunTime:0.001192s ]
+INFO: Run ParseTemplate Behavior [ RunTime:0.138942s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.139357s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000830s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000728s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000776s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000746s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003959s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000946s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001059s ]
+
+[ 2013-05-16T20:56:49+08:00 ] ERR: (ThinkException) 无法加载模块:Uploads
+[ 2013-05-16T20:56:49+08:00 ] ERR: (ThinkException) 无法加载模块:Uploads
+[ 2013-05-16T20:56:49+08:00 ] ERR: (ThinkException) 无法加载模块:Uploads
+[ 2013-05-16T20:56:49+08:00 ] ERR: (ThinkException) 无法加载模块:Uploads
+[ 2013-05-16T20:56:49+08:00 ] ERR: (ThinkException) 无法加载模块:Uploads
+[ 2013-05-16T20:56:49+08:00 ] ERR: (ThinkException) 无法加载模块:Uploads
+[ 2013-05-16T20:56:49+08:00 ] ERR: (ThinkException) 无法加载模块:Uploads
+[ 2013-05-16T20:56:49+08:00 ] ERR: (ThinkException) 无法加载模块:Uploads
+[ 2013-05-16T20:56:49+08:00 ] ERR: (ThinkException) 无法加载模块:Uploads
+[ 2013-05-16T20:56:49+08:00 ] ERR: (ThinkException) 无法加载模块:Uploads
+[ 2013-05-16T20:56:49+08:00 ] ERR: (ThinkException) 无法加载模块:Uploads
+[ 2013-05-16T20:56:49+08:00 ] ERR: (ThinkException) 无法加载模块:Static
+[ 2013-05-16T20:56:49+08:00 ] ERR: (ThinkException) 无法加载模块:Static
+[ 2013-05-16T20:56:49+08:00 ] ERR: (ThinkException) 无法加载模块:Static
+[ 2013-05-16T20:56:49+08:00 ] ERR: (ThinkException) 无法加载模块:Static
+[ 2013-05-16T20:56:49+08:00 ] ERR: (ThinkException) 无法加载模块:Static
+[ 2013-05-16T20:56:49+08:00 ] ERR: (ThinkException) 无法加载模块:Static
+[ 2013-05-16T20:56:49+08:00 ] ERR: (ThinkException) 无法加载模块:Static
+[ 2013-05-16T20:56:49+08:00 ] ERR: (ThinkException) 无法加载模块:Static
+[ 2013-05-16T20:56:50+08:00 ] ERR: (ThinkException) 无法加载模块:Static
+[ 2013-05-16T20:56:50+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon

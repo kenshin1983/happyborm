@@ -1,0 +1,23 @@
+<div class="pageContent">
+	<div class="pageFormContent" layoutH="58">
+		<ul class="tree expand" id="catebox">
+			<volist name="data" id="vo">
+		    <li><a href="javascript:;" onclick="$.bringBack({ id:'{$vo.cate_id}', name:'{$vo.cate_name}' })">{$vo.cate_name}</a>
+		          <notempty name="vo._child">
+		          <ul>
+		          <volist name="vo._child" id="child">
+		                <li><a href="javascript:;" onclick="$.bringBack({ id:'{$child.cate_id}', name:'{$child.cate_name}' })">{$child.cate_name}</a></li>
+		          </volist> 
+		          </ul>
+		          </notempty>
+			</volist>			
+            </li>
+		</ul>
+	</div>
+	
+	<div class="formBar">
+		<ul>
+			<li><div class="button"><div class="buttonContent"><button class="close" type="button">关闭</button></div></div></li>
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,90 @@
+<div class="pageContent">
+	<form method="post" action="/Admin/article/editcate?cate_id={$Think.get.cate_id}" class="pageForm required-validate" onsubmit="return validateCallback(this, dialogAjaxDone);">
+		<div class="pageFormContent nowrap" layoutH="56">
+			<dl>
+				<dt>分类名称：</dt>
+				<dd><input type="text" name="cate_name" size="100" class="required" value="{$data.cate_name}" /></dd>
+			</dl>
+			<dl>
+				<dt>分类别名：</dt>
+				<dd><input type="text" name="cate_alpha" size="100" value="{$data.cate_alpha}" /></dd>
+			</dl>
+			<dl>
+				<dt>上级分类：</dt>
+				<dd>
+					<select name="pid" class="combox">
+						<option value="">====顶级分类====</option>
+						<volist name="pcate" id="vo">
+							<neq name="data.cate_id" value="$vo.cate_id">
+								<option value="{$vo.cate_id}" <eq name="data.pid" value="$vo.cate_id">selected</eq>>{$vo.cate_name}</option>
+							</neq>
+						</volist>
+					</select>
+				</dd>
+			</dl>
+			<dl>
+				<dt>分类图片：</dt>
+				<dd>
+					<div id="imageBox_cate"><notempty name="data.cate_img"><img src="{$data.cate_img}"  width="200" height="200" /></notempty></div>
+					<input id="uploadInput_cate" type="file" name="image" 
+					uploaderOption="{
+						swf:'/static/dwz/uploadify/scripts/uploadify.swf',
+						uploader:'/Admin/index/upload',
+						formData:{id:'cate'},
+						buttonText:'请选择文件',
+						fileSizeLimit:'2MB',
+						width:100,
+						height:20,
+						fileTypeDesc:'*.jpg;*.jpeg;*.gif;*.png;',
+						fileTypeExts:'*.jpg;*.jpeg;*.gif;*.png;',
+						onUploadSuccess:uploadifySuccess
+					}"
+					/>
+					<input type="hidden" id="imageValue_cate" name="cate_img" value="{$data.cate_img}" />
+				</dd>
+			</dl>
+			<dl>
+				<dt>分类描述：</dt>
+				<dd><textarea name="content" cols="100" rows="4">{$data.content}</textarea></dd>
+			</dl>
+			<dl>
+				<dt>排序：</dt>
+				<dd><input type="text" size="10" value="{$data.ordering}" name="ordering" class="digits" min="1" max="255" alt="请输入1-255的数字" ></dd>
+			</dl>
+			<div class="divider"></div>
+			<dl>
+				<dt>seo_title：</dt>
+				<dd><input type="text" name="seo_title" size="100" value="{$data.seo_title}" /></dd>
+			</dl>
+			<dl>
+				<dt>seo_keywords：</dt>
+				<dd><input type="text" name="seo_keywords" size="100" value="{$data.seo_keywords}" /></dd>
+			</dl>
+			<dl class="nowrap">
+				<dt>seo_description</dt>
+				<dd><textarea name="seo_desc" cols="100" rows="4">{$data.seo_desc}</textarea></dd>
+			</dl>
+		</div>
+		<div class="formBar">
+			<ul>
+				<!--<li><a class="buttonActive" href="javascript:;"><span>保存</span></a></li>-->
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li>
+					<div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div>
+				</li>
+			</ul>
+		</div>
+	</form>
+</div>
+<script type="text/javascript">
+function uploadifySuccess(file, data, response){
+	data = $.parseJSON(data);
+	if(data.errorCode == 0){
+		var image = '/temp/' + data.images[0].savename;
+		$('#imageBox_' + data.id).html('<img src="' + image + '" width="200" height="200" />');
+		$('#imageValue_' + data.id).val(image);
+	}else{
+		alert(data.errorMsg);
+	}
+}
+</script>

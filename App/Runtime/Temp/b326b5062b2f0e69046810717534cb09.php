@@ -1,0 +1,3 @@
+<?php
+//000000003600a:8:{i:0;a:2:{s:7:"cate_id";s:1:"1";s:9:"cate_name";s:12:"新闻动态";}i:1;a:2:{s:7:"cate_id";s:1:"2";s:9:"cate_name";s:12:"美国新闻";}i:2;a:2:{s:7:"cate_id";s:1:"3";s:9:"cate_name";s:18:"月子中心新闻";}i:3;a:2:{s:7:"cate_id";s:1:"4";s:9:"cate_name";s:24:"美国月子中心流程";}i:4;a:2:{s:7:"cate_id";s:1:"5";s:9:"cate_name";s:12:"之家新闻";}i:5;a:2:{s:7:"cate_id";s:1:"6";s:9:"cate_name";s:15:"父母的疑问";}i:6;a:2:{s:7:"cate_id";s:1:"7";s:9:"cate_name";s:9:"的理由";}i:7;a:2:{s:7:"cate_id";s:1:"8";s:9:"cate_name";s:21:"选择优质服务商";}}
+?>
